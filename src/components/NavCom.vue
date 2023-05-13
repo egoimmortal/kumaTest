@@ -1,18 +1,26 @@
 <template>
-    <nav class="navbar navbar-dark bg-dark">
-		<div class="p-4 d-block d-md-none">
-			<div class="bg-dark p-4">
-				<router-link to="/">Home</router-link> |
-				<router-link to="/vueinfo">Vueinfo</router-link> |
-				<router-link to="/about">About</router-link>
+	<div class="nav-parent">
+		<img alt="Vue logo" src="../assets/logo.png">
+		<nav class="navbar navbar-dark">
+			<div class="nav-list p-4 d-flex d-md-none">
+				<div class="p-4">
+					<router-link to="/">首頁</router-link>
+					<router-link to="/color">色系</router-link>
+					<router-link to="/vueinfo">風格</router-link>
+					<router-link to="/about">聯絡我們</router-link>
+				</div>
 			</div>
-		</div>
-		<div class="container-fluid d-none d-md-block">
-			<router-link to="/">Home</router-link> |
-			<router-link to="/vueinfo">Vueinfo</router-link> |
-			<router-link to="/about">About</router-link>
-		</div>
-    </nav>
+			<div class="nav-list container-fluid d-none d-md-flex">
+				<router-link to="/">首頁</router-link>
+				<router-link to="/color">色系</router-link>
+				<router-link to="/vueinfo">風格</router-link>
+				<router-link to="/about">聯絡我們</router-link>
+			</div>
+		</nav>
+		<span>
+			BOXING CLUB
+		</span>
+	</div>
 </template>
 
 <script lang="ts" setup>
@@ -20,16 +28,42 @@
 </script>
 
 <style lang="scss" scoped>
+.nav-parent{
+	height: 100%;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+
+	& > img{
+		height: 35%;
+		padding: 10%;
+	}
+}
+
 nav {
-	padding: 30px;
+	height: 60%;
+    display: flex;
+    align-items: flex-start;
 
 	a {
 		font-weight: bold;
-		color: #2c3e50;
+		color: #747474;
 
 		&.router-link-exact-active {
-		color: #42b983;
+			color: var(--theme);
 		}
 	}
+
+	.nav-list{
+		flex-direction: column;
+
+		& > *{
+			padding-bottom: 20%;
+		}
+	}
+}
+
+span{
+	color: #747474;
 }
 </style>
