@@ -1,10 +1,11 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
+  <NavCom></NavCom>
   <router-view/>
 </template>
+
+<script setup lang="ts">
+import NavCom from './components/NavCom.vue';
+</script>
 
 <style lang="scss">
 #app {
@@ -13,6 +14,10 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+
+body{
+  margin: 0px;
 }
 
 nav {
