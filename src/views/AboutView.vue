@@ -1,5 +1,6 @@
 <template>
 	<div class="about">
+		<div class="nav">nav</div>
 		<AbortCom class="content"></AbortCom>
 		<FooterContent class="footer"></FooterContent>
 	</div>
@@ -12,12 +13,20 @@ import FooterContent from '@/components/FooterContent.vue';
 
 <style lang="scss" scoped>
 .about{
-	& .content{
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+
+	.nav{
 		width: 100%;
-		height: 92%;
+		height: 10%;
+	}
+	.content{
+		width: 90%;
+		height: 82%;
 	}
 
-	& .footer{
+	.footer{
 		width: 100%;
 		height: 8%;
 	}
