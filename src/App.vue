@@ -1,12 +1,12 @@
 <template>
   <div class="base-parent">
-    <NavCom id="nav"></NavCom>
+    <SideBar id="nav"></SideBar>
     <router-view id="content" />
   </div>
 </template>
 
 <script setup lang="ts">
-import NavCom from './components/NavCom.vue';
+import SideBar from './components/SideBar.vue';
 import { onMounted } from 'vue';
 import colorJson from '@/assets/json/color.json';
 
