@@ -22,6 +22,7 @@ onMounted(() => {
 	--window-scale: 0;
 	--nowHeight: 0;
   --theme: '#FFFFFF';
+  --carousel-animation-time: 0s;
 }
 
 body{
