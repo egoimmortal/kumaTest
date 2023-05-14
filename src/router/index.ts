@@ -13,6 +13,11 @@ const routes: Array<RouteRecordRaw> = [
     redirect: '/'
   },
   {
+    path: '/vueinfo',
+    name: 'vueinfo',
+    redirect: '/about'
+  },
+  {
     path: '/about',
     name: 'about',
     // route level code-splitting
