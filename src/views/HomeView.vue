@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <CarouselCom></CarouselCom>
+    <CarouselCom class="content"></CarouselCom>
   </div>
 </template>
 
@@ -9,5 +9,10 @@ import CarouselCom from '@/components/CarouselCom.vue';
 </script>
 
 <style lang="scss" scoped>
-
+.home{
+  & > .content{
+    width: 100%;
+    height: 100%;
+  }
+}
 </style>

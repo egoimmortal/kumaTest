@@ -14,6 +14,7 @@ onMounted(() => {
 	let root = document.querySelector(':root') as HTMLElement;
 	root.style.setProperty('--nowHeight', window.innerHeight + 'px');
   root.style.setProperty('--theme', colorJson.theme);
+  root.style.setProperty('--content-footer', colorJson.contentFooter);
 });
 </script>
 
@@ -22,6 +23,7 @@ onMounted(() => {
 	--window-scale: 0;
 	--nowHeight: 0;
   --theme: '#FFFFFF';
+  --content-footer: '#000000';
   --carousel-animation-time: 0s;
 }
 
@@ -45,16 +47,21 @@ a{
 	}
 }
 
-#nav{
-  width: 30%;
-}
-
-#content{
-  width: 70%;
-}
-
 .base-parent{
   display: flex;
   flex-direction: row;
+
+  & > *{
+    position: relative;
+    height: 100%;
+  }
+
+  & #nav{
+    width: 30%;
+  }
+
+  & #content{
+    width: 70%;
+  }
 }
 </style>
