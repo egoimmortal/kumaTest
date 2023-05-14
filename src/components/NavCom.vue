@@ -1,24 +1,42 @@
 <template>
 	<div class="nav-parent">
-		<div class="left">
-			{{ store.state.currentPage }}
-		</div>
-		<div class="right">
-			Home
+		<div>
+			<div class="left">
+				{{ currentRouterName }}
+			</div>
+			<div class="right">
+				Home
+				<span v-if="currentRouterName != ''">
+					&nbsp;>&nbsp;{{ currentRouterName }}
+				</span>
+			</div>
 		</div>
 	</div>
 </template>
 
 <script lang="ts" setup>
-import { onMounted } from 'vue';
-import { useStore } from 'vuex';
+import { onMounted, ref } from 'vue';
+import { useRouter } from 'vue-router';
 
-const store = useStore();
+const currentRouterName = ref('');
 
 onMounted(() => {
-	console.log('store.state.currentPage = ', store.state.currentPage);
+	const router = useRouter();
+	currentRouterName.value = router.currentRoute.value.name as string;
 });
 </script>
 
 <style lang="scss" scoped>
+.nav-parent{
+	background-color: #E0E0E0;
+	display: flex;
+	align-items: center;
+    justify-content: center;
+
+	& > div{
+		width: 90%;
+		display: flex;
+		justify-content: space-between;
+	}
+}
 </style>
