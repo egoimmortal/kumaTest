@@ -1,12 +1,13 @@
 <template>
 	<div class="about">
-		<div class="nav">nav</div>
+		<NavCom class="nav"></NavCom>
 		<AbortCom class="content"></AbortCom>
 		<FooterContent class="footer"></FooterContent>
 	</div>
 </template>
 
 <script setup lang="ts">
+import NavCom from '@/components/NavCom.vue';
 import AbortCom from '@/components/AbortCom.vue';
 import FooterContent from '@/components/FooterContent.vue';
 </script>
