@@ -1,7 +1,7 @@
 <template>
   <div class="base-parent">
-    <SideBar id="nav"></SideBar>
-    <router-view id="content" />
+    <SideBar id="nav" class="d-sm-none d-md-flex"></SideBar>
+    <router-view id="content"/>
   </div>
 </template>
 
@@ -25,6 +25,18 @@ onMounted(() => {
   --theme: '#FFFFFF';
   --content-footer: '#000000';
   --carousel-animation-time: 0s;
+}
+
+@media (max-width: 576px) {
+  #content{
+    width: 70%;
+  }
+}
+
+@media (min-width: 577px) {
+  #content{
+    width: 100%;
+  }
 }
 
 body{
@@ -58,10 +70,6 @@ a{
 
   & #nav{
     width: 30%;
-  }
-
-  & #content{
-    width: 70%;
   }
 }
 </style>

@@ -38,7 +38,6 @@ const ChangePage = (link: Event) => {
 <style lang="scss" scoped>
 .nav-parent{
 	height: 100%;
-	display: flex;
     flex-direction: column;
     align-items: center;
 
